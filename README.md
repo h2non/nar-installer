@@ -29,9 +29,10 @@ NAME="project-name"
 PACKAGE_URL="https://github.com/you/$NAME/releases/download/$VERSION/$NAME-$VERSION"
 ```
 
-Save your changes and simply run the script to install your package:
+Save your changes and simply run the script to install your package. 
+Example downloading the install script:
 ```bash
-curl -L https://github.com/you/project/tree/installer.sh 0.1.0 | sudo bash
+curl -L https://github.com/you/project/tree/installer.sh | sudo bash <(0.1.0)
 ```
 
 ## Examples
