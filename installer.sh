@@ -5,16 +5,10 @@
 # License: wtfpl
 #
 
-# Customize this!
-#VERSION=$1
-NAME="package"
-URL="https://github.com/you/$NAME/releases/download/$VERSION/$NAME-$VERSION"
-
 while [[ $# > 0 ]]; do
   case $1 in
       -f|--force)
       FORCE=1
-      shift
       ;;
       *)
       VERSION=$1
@@ -22,6 +16,10 @@ while [[ $# > 0 ]]; do
   esac
   shift
 done
+
+# Customize this!
+NAME="package"
+URL="https://github.com/you/$NAME/releases/download/$VERSION/$NAME-$VERSION"
 
 os=`uname`
 if [[ "$os" == 'Linux' ]]; then
