@@ -6,17 +6,18 @@
 #
 
 # Customize this!
-VERSION=$1
+#VERSION=$1
 NAME="package"
 URL="https://github.com/you/$NAME/releases/download/$VERSION/$NAME-$VERSION"
 
-while [[ $# > 1 ]]; do
+while [[ $# > 0 ]]; do
   case $1 in
       -f|--force)
       FORCE=1
       shift
       ;;
       *)
+      VERSION=$1
       ;;
   esac
   shift
