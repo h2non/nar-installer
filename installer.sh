@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 #
 # nar-installer - Simple Bash script to install packages like using `npm install -g`
+# Code: https://github.com/h2non/nar-installer
 # License: wtfpl
 #
 
