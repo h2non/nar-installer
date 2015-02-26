@@ -1,4 +1,4 @@
-# [nar](https://github.com/h2non/nar)-install
+# [nar](https://github.com/h2non/nar)-installer
 
 Dead simple Bash script to download and proper install nar executable packages. Analog to `npm install --global`
 
