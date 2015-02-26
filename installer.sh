@@ -33,7 +33,8 @@ if [ ! -d $INSTALL_PATH ]; then
 fi
 
 if [ -d "$INSTALL_PATH" ]; then
-  echo "Package $NAME is already installed in $INSTALL_PATH.\nRemove it to continue"
+  echo "Package $NAME is already installed in $INSTALL_PATH"
+  echo "Remove it to continue"
   exit 1
 fi
 
@@ -44,7 +45,8 @@ download="$URL-$platform-x64.nar"
 curl -k -L $download -o $NAME.nar
 
 if [ $? != 0 ]; then
-  echo "Error while downloading binary from $download.\nExit code $?" && exit 1
+  echo "Error with code $? while downloading binary from $download. 
+  exit 1
 fi
 
 bash $NAME.nar extract -o $INSTALL_PATH
