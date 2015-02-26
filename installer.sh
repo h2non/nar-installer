@@ -10,6 +10,18 @@ VERSION=$1
 NAME="package"
 URL="https://github.com/you/$NAME/releases/download/$VERSION/$NAME-$VERSION"
 
+while [[ $# > 1 ]]; do
+  case $1 in
+      -f|--force)
+      FORCE=1
+      shift
+      ;;
+      *)
+      ;;
+  esac
+  shift
+done
+
 os=`uname`
 if [[ "$os" == 'Linux' ]]; then
    platform='linux'
@@ -29,14 +41,16 @@ fi
 
 if [ -d "$HOME/.npm" ]; then
   INSTALL_PATH="$HOME/.npm/$NAME"
-else 
+else
    INSTALL_PATH="$HOME/.$NAME"
 fi
 
-if [ -d "$INSTALL_PATH" ]; then
-  echo "Package $NAME is already installed in $INSTALL_PATH"
-  echo "Remove it to continue"
-  exit 1
+if [ -z $FORCE]; then
+  if [ -d "$INSTALL_PATH" ]; then
+    echo "Package $NAME is already installed in $INSTALL_PATH"
+    echo "Remove it to continue"
+    exit 1
+  fi
 fi
 
 echo "Downloading package $NAME v.$VERSION"
@@ -46,7 +60,7 @@ download="$URL-$platform-x64.nar"
 curl -k -L $download -o $NAME.nar
 
 if [ $? != 0 ]; then
-  echo "Error with code $? while downloading binary from $download. 
+  echo "Error with code $? while downloading binary from $download"
   exit 1
 fi
 
@@ -58,7 +72,7 @@ echo 'script="$(readlink ${BASH_SOURCE[0]})"' >> $INSTALL_PATH/bin/_run
 echo 'base="$(dirname $script)"' >> $INSTALL_PATH/bin/_run
 echo '$base/node $base/'"$NAME "'$*' >> $INSTALL_PATH/bin/_run
 
-if [ -f /usr/bin/$NAME ]; then
+if [ -L "/usr/bin/$NAME" ]; then
   rm -f /usr/bin/$NAME
 fi
 
@@ -73,3 +87,4 @@ echo
 echo "The installation of $NAME was completed"
 echo "$NAME command-line is also available from PATH"
 echo
+
