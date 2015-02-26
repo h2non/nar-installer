@@ -1,6 +1,7 @@
 # [nar](https://github.com/h2non/nar)-installer
 
-Dead simple Bash script to download and proper install nar executable packages. Analog to `npm install --global`
+Dead simple Bash script to download and proper install [nar](https://github.com/h2non/nar) executable packages.
+Analog to `npm install --global`
 
 Only works in GNU/Linux, OSX and SunOS
 
@@ -11,9 +12,10 @@ Clone this repository and switch into it
 git clone https://github.com/h2non/nar-install && cd nar-installer
 ```
 
-Open it in your favorite editor and customize the following line
+Open it in your favorite editor and customize the following values
 ```bash
-PACKAGE_URL="https://github.com/you/project/archives/$VERSION/download"
+NAME="project-name"
+PACKAGE_URL="https://github.com/you/$NAME/releases/download/$VERSION/$NAME-$VERSION"
 ```
 
 Save your changes and simply run the script to install your package:
