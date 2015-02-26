@@ -3,7 +3,19 @@
 Dead simple Bash script to download and proper install [nar](https://github.com/h2non/nar) executable packages.
 Analog to `npm install --global`
 
+Useful while distributing your `nar` binary package as one-command line install solution
+
 Only works in GNU/Linux, OSX and SunOS
+
+## Generate binaries
+
+Create `nar` executable archives of your package for multiple platforms:
+```bash
+nar --executable --os linux --arch x64
+nar --executable --os darwin --arxh x64
+```
+
+Then you may upload the `nar` archives to Github, S3 or whatever you want
 
 ## Usage
 
