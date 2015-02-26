@@ -19,7 +19,7 @@ Then you may upload the `nar` archives to Github, S3 or whatever you want
 
 ## Usage
 
-Fetch the script:
+Fetch the installer script:
 ```bash
 curl -O -L -k https://raw.githubusercontent.com/h2non/nar-installer/master/installer.sh
 ```
