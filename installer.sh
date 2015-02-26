@@ -7,7 +7,7 @@
 # Customize this!
 VERSION=$1
 NAME="package"
-URL="https://github.com/you/project/releases/download/$VERSION/$NAME-$VERSION"
+URL="https://github.com/you/$NAME/releases/download/$VERSION/$NAME-$VERSION"
 
 os=`uname`
 if [[ "$os" == 'Linux' ]]; then
