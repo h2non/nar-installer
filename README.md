@@ -21,7 +21,9 @@ Save your changes and simply run the script to install your package:
 curl -L https://github.com/you/project/tree/installer.sh 0.1.0 | sudo bash
 ```
 
-### Projects using nar installer
+## Examples
+
+Projects using nar installer:
 
 - [Apitance](https://github.com/h2non/apitance)
 
