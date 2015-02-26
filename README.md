@@ -16,10 +16,14 @@ Open it in your favorite editor and customize the following line
 PACKAGE_URL="https://github.com/you/project/archives/$VERSION/download"
 ```
 
-Save your changes and use the script in your project
+Save your changes and simply run the script to install your package:
 ```bash
 curl -L https://github.com/you/project/tree/installer.sh 0.1.0 | sudo bash
 ```
+
+### Projects using nar installer
+
+- [Apitance](https://github.com/h2non/apitance)
 
 ## License
 
