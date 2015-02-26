@@ -1,6 +1,6 @@
 # [nar](https://github.com/h2non/nar)-installer
 
-Dead simple Bash script to download and install [nar](https://github.com/h2non/nar) executable packages in a similar like npm does via `npm install --global`
+Dead simple Bash script to download and install [nar](https://github.com/h2non/nar) executable packages in a similar way like npm does via `npm install --global`
 
 Useful when you want to distribute your `nar` binary package as one-command install solution
 
