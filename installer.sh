@@ -56,10 +56,11 @@ echo "Downloading package $NAME v.$VERSION"
 echo
 
 download="$URL-$platform-x64.nar"
-curl -k -L $download -o $NAME.nar
+curl -k -L --fail -1 $download -o $NAME.nar
 
-if [ $? != 0 ]; then
-  echo "Error with code $? while downloading binary from $download"
+if [ $? -ne 0 ]; then
+  echo
+  echo "Error while downloading archive from $download"
   exit 1
 fi
 
