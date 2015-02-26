@@ -27,9 +27,10 @@ if [ -z `which curl` ]; then
   echo "Cannot find curl binary in PATH. Install it to continue" && exit 1
 fi
 
-INSTALL_PATH="$HOME/.npm/$NAME"
-if [ ! -d $INSTALL_PATH ]; then
-  INSTALL_PATH="$HOME/.$NAME"
+if [ -d "$HOME/.npm" ]; then
+  INSTALL_PATH="$HOME/.npm/.$NAME"
+else 
+   INSTALL_PATH="$HOME/.$NAME"
 fi
 
 if [ -d "$INSTALL_PATH" ]; then
