@@ -16,6 +16,13 @@ nar --executable --os darwin --arxh x64
 
 Then you may upload the `nar` archives to Github, S3 or whatever you want
 
+## CLI
+
+Supported flags
+```bash
+--force - Force package installation, removing old installations
+```
+
 ## Usage
 
 Fetch the installer script:
