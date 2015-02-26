@@ -7,12 +7,12 @@ Only works in GNU/Linux, OSX and SunOS
 
 ## Usage
 
-Clone this repository and switch into it
+Fetch the script:
 ```bash
-git clone https://github.com/h2non/nar-install && cd nar-installer
+curl -O -L -k https://raw.githubusercontent.com/h2non/nar-installer/master/installer.sh
 ```
 
-Open it in your favorite editor and customize the following values
+Open `installer.sh` in your favorite editor and customize the following values:
 ```bash
 NAME="project-name"
 PACKAGE_URL="https://github.com/you/$NAME/releases/download/$VERSION/$NAME-$VERSION"
