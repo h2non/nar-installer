@@ -47,7 +47,7 @@ fi
 if [ -z $FORCE]; then
   if [ -d "$INSTALL_PATH" ]; then
     echo "Package $NAME is already installed in $INSTALL_PATH"
-    echo "Remove it to continue"
+    echo "Remove it to continue or pass the --force flag"
     exit 1
   fi
 fi
