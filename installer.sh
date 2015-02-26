@@ -69,6 +69,6 @@ rm -rf .nar
 echo
 echo "The installation of $NAME was completed"
 echo
-echo "This package is also available from PATH. Use:"
+echo "$NAME command-line is also available from PATH. Use:"
 echo "$NAME --version"
 echo
