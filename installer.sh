@@ -28,7 +28,7 @@ if [ -z `which curl` ]; then
 fi
 
 if [ -d "$HOME/.npm" ]; then
-  INSTALL_PATH="$HOME/.npm/.$NAME"
+  INSTALL_PATH="$HOME/.npm/$NAME"
 else 
    INSTALL_PATH="$HOME/.$NAME"
 fi
