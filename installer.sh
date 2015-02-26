@@ -32,7 +32,7 @@ if [ ! -d $INSTALL_PATH ]; then
   INSTALL_PATH="$HOME/.$NAME"
 fi
 
-if [ -d $INSTALL_PATH" ]; then
+if [ -d "$INSTALL_PATH" ]; then
   echo "Package $NAME is already installed in $INSTALL_PATH.\nRemove it to continue"
   exit 1
 fi
