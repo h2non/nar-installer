@@ -10,6 +10,10 @@ while [[ $# > 0 ]]; do
       -f|--force)
       FORCE=1
       ;;
+      -p|--path)
+      shift
+      INSTALL_PATH=$1
+      ;;
       *)
       VERSION=$1
       ;;
@@ -38,10 +42,12 @@ if [ -z `which curl` ]; then
   echo "Cannot find curl binary in PATH. Install it to continue" && exit 1
 fi
 
-if [ -d "$HOME/.npm" ]; then
-  INSTALL_PATH="$HOME/.npm/$NAME"
-else
-   INSTALL_PATH="$HOME/.$NAME"
+if [ -z $INSTALL_PATH ]; then
+  if [ -d "$HOME/.npm" ]; then
+    INSTALL_PATH="$HOME/.npm/$NAME"
+  else
+     INSTALL_PATH="$HOME/.$NAME"
+  fi
 fi
 
 if [ -z $FORCE]; then
