@@ -1,8 +1,8 @@
 # [nar](https://github.com/h2non/nar)-installer
 
-Dead simple Bash script to download and install [nar](https://github.com/h2non/nar) executable packages in a similar way like npm does via `npm install --global`
+Dead simple Bash script to download and install [nar](https://github.com/h2non/nar) self-contained executable packages in a similar way like npm does via `npm install --global`
 
-Useful when you want to distribute your `nar` binary package as one-command install solution
+Useful to provide an easy one-command install solution for your packages
 
 Only works in GNU/Linux, OSX and SunOS. Requires `curl`
 
@@ -14,13 +14,14 @@ nar --executable --os linux --arch x64
 nar --executable --os darwin --arxh x64
 ```
 
-Then you may upload the `nar` archives to Github, S3 or whatever you want
+Then you can upload the `nar` archives to Github, S3 or whatever you want
 
 ## CLI
 
 Supported flags
 ```bash
---force - Force package installation, removing old installations
+-f, --force - Force package installation, removing old installations
+-p, --path  - Installation path. Default to ~/.npm or ~/ 
 ```
 
 ## Usage
