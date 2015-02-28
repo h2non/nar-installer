@@ -2,7 +2,7 @@
 
 Dead simple Bash script to download and install [nar](https://github.com/h2non/nar) self-contained executable packages in a similar way like npm does via `npm install --global`
 
-Useful to provide an easy one-command install solution for your packages
+Useful to provide an easy-to-use one-command installer solution for your applications
 
 Only works in GNU/Linux, OSX and SunOS. Requires `curl`
 
