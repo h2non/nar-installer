@@ -11,12 +11,17 @@ Only works in GNU/Linux, OSX and SunOS. Requires `curl`
 Create `nar` executable archives of your package for multiple platforms:
 ```bash
 nar --executable --os linux --arch x64
-nar --executable --os darwin --arxh x64
+nar --executable --os darwin --arch x64
 ```
 
-Then you can upload the `nar` archives to Github, S3 or whatever you want
+Then you can upload the `nar` archives to a Github tag, S3 or whatever you want
 
 ## CLI
+
+Arguments
+```bash
+./installer.sh <version> [flags]
+```
 
 Supported flags
 ```bash
@@ -34,18 +39,19 @@ curl -O -L -k https://raw.githubusercontent.com/h2non/nar-installer/master/insta
 Open `installer.sh` in your favorite editor and customize the following values:
 ```bash
 NAME="project-name"
-PACKAGE_URL="https://github.com/you/$NAME/releases/download/$VERSION/$NAME-$VERSION"
+URL="https://github.com/you/$NAME/releases/download/$VERSION/$NAME-$VERSION"
 ```
 
 Save your changes and simply run the script to install your package. 
-Example downloading the install script:
+
+Example downloading the installer script and running it:
 ```bash
-curl -L https://github.com/you/project/tree/installer.sh | sudo bash <(0.1.0)
+curl -L https://github.com/you/project/tree/installer.sh | sudo bash 0.1.0
 ```
 
 ## Examples
 
-Projects using nar installer:
+Projects using `nar-installer`:
 
 - [Apitance](https://github.com/h2non/apitance)
 
