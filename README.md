@@ -4,7 +4,7 @@ Dead simple Bash script to download and install [nar](https://github.com/h2non/n
 
 Useful to provide an easy-to-use one-command installer solution for your applications
 
-Only works in GNU/Linux, OSX and SunOS. Requires `curl`
+Works in GNU/Linux, OSX and SunOS. Requires `curl`
 
 ## Generate binaries
 
